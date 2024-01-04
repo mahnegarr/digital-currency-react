@@ -70,3 +70,11 @@ button:focus-visible {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+  @apply m-auto max-w-[1200px] min-h-[100vh] p-[10px] bg-[#131315] text-[#fff]
+}
+
+*{
+  @apply p-0 m-0 box-border
+}
