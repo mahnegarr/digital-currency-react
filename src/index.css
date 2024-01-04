@@ -78,3 +78,7 @@ body{
 *{
   @apply p-0 m-0 box-border
 }
+
+a{
+  @apply decoration-inherit text-inherit
+}
