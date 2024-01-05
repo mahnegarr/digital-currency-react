@@ -1,10 +1,11 @@
+import Homepage from "./components/templates/Homepage"
 
 
 function App() {
 
   return (
     <>
-      crypto app
+      <Homepage/>ّ
     </>
   )
 }
