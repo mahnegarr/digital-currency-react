@@ -9,7 +9,43 @@
 table{
     @apply w-full border-collapse
 }
+thead{
+    @apply border-b-[2px] border-[#fff] mb-5
+}
 
-table thead{
-    @apply border-b-[2px] border-[#fff] mb-5 mt-6
+th{
+    @apply text-[1rem] text-left py-3 px-0
+}
+
+tbody tr{
+    @apply h-[80px] border-b-[1px] border-[#22262e] font-[600] text-[1.1rem]
+}
+
+.symbol{
+    @apply flex items-center cursor-pointer 
+}
+
+.symbol img{
+    @apply w-6 h-6 mr-[10px]
+}
+
+.symbol span{
+    @apply text-[1.2rem] font-[600] text-[#9fa6b7]
+}
+
+.success{
+    @apply text-[#57bc7c]
+}
+
+.error{
+    @apply text-[#d33636]
+}
+
+@media (max-width:600px){
+    table{
+        @apply block overflow-y-scroll
+    }
+    th,td{
+        @apply py-0 px-[10px]
+    }
 }
