@@ -24,7 +24,7 @@ function Homepage() {
   return (
     <div>
       <Search currency={currency} setCurrency={setCurrency} />
-      <Tablecoin coins={coins} isLoading={isLoading} />
+      <Tablecoin coins={coins} isLoading={isLoading} currency={currency} />
       <Pagination page={page} setPage={setPage} />
     </div>
   );

@@ -4,7 +4,7 @@ import chartDown from "../../assets/chart-down.svg";
 import { RotatingLines } from "react-loader-spinner";
 import styles from "../modules/Tablecoin.module.css";
 
-function Tablecoin({ coins, isLoading }) {
+function Tablecoin({ coins, isLoading,currency }) {
   return (
     <div className={styles.mainDiv}>
       {isLoading ? (
@@ -24,7 +24,7 @@ function Tablecoin({ coins, isLoading }) {
           <tbody>
             {coins.map((coin) => (
                 
-              <TableRow coin={coin} key={coin.id} />
+              <TableRow coin={coin} key={coin.id} currency={currency} />
             ))}
           </tbody>
         </table>
@@ -44,8 +44,14 @@ const TableRow = ({
     price_change_percentage_24h: price_change,
     total_volume,
     id,
-  },
+  },currency
 }) => {
+  let currentSymbol = "$"
+  if(currency ==="eur"){
+    currentSymbol = "€"
+  }else if(currency==="JPY"){
+    currentSymbol ="¥"
+  }
   return (
     <>
       <tr key={id}>
@@ -56,7 +62,7 @@ const TableRow = ({
           </div>
         </td>
         <td>{name}</td>
-        <td>${current_price.toLocaleString()}</td>
+        <td>{currentSymbol}{current_price.toLocaleString()}</td>
         <td className={price_change > 0 ? styles.success : styles.error}>
           {price_change.toFixed(2)}%
         </td>
