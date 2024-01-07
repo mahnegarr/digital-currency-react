@@ -2,10 +2,11 @@ import React from "react";
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
 import { RotatingLines } from "react-loader-spinner";
+import styles from "../modules/Tablecoin.module.css"
 
 function Tablecoin({ coins, isLoading }) {
   return (
-    <div>
+    <div className={styles.mainDiv}>
       {isLoading ? (
         <RotatingLines strokeColor="#3874ff" strokeWidth="2"/>
       ) : (

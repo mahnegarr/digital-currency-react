@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .mainDiv{
+    @apply grid grid-cols-7 auto-rows-auto
+} */
+
+table{
+    @apply w-full border-collapse
+}
+
+table thead{
+    @apply border-b-[2px] border-[#fff] mb-5 mt-6
+}
