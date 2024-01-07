@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .mainDiv{
-    @apply grid grid-cols-7 auto-rows-auto
-} */
+.mainDiv{
+    @apply p-4
+}
 
 table{
     @apply w-full border-collapse

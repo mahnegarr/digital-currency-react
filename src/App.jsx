@@ -1,13 +1,13 @@
-import Homepage from "./components/templates/Homepage"
+import Homepage from "./components/templates/Homepage";
 
 
 function App() {
-
   return (
     <>
-      <Homepage/>ّ
+      
+      <Homepage />ّ
     </>
-  )
+  );
 }
 
-export default App
+export default App;
