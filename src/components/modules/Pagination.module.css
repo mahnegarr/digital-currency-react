@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.paginationDiv {
+  @apply w-[400px] flex  justify-between items-center m-auto my-[100px];
+}
+.button {
+  @apply w-[80px] bg-[#3874ff] text-[#fff] border-none rounded-[5px] py-[5px] px-[10px] cursor-pointer text-[1rem];
+}
+
+p {
+  @apply inline-block text-center w-[25px]  font-semibold border-[1px] rounded-[3px] cursor-pointer;
+}
+
+.disabled {
+  @apply opacity-[.3];
+}
+
+.selected {
+  @apply bg-[#3874ff] text-[#fff] border-[#3874ff]
+}
