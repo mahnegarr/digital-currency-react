@@ -20,7 +20,7 @@ function Tablecoin({ coins }) {
           </tr>
         </thead>
         <tbody>
-          {coins.map((coin) => {
+          {coins.map((coin) => (
             <tr key={coin.id}>
               <td>
                 <div>
@@ -35,8 +35,8 @@ function Tablecoin({ coins }) {
               <td>
                 {coin.price_change_percentage_24h > 0 ? chartUp : chartDown}
               </td>
-            </tr>;
-          })}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
