@@ -6,31 +6,19 @@ import Search from "../modules/Search";
 
 function Homepage() {
   const [coins, setCoins] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [page, setPage] = useState(1);
-  const [currency, setCurrency] = useState("usd");
 
   useEffect(() => {
-    setIsLoading(true);
     const getData = async () => {
-      try{
-
-        const res = await fetch(getCoinList.getCoinList(page,currency));
-        const json = await res.json();
-        setCoins(json);
-        setIsLoading(false);
-      }catch(error){
-        console.log(error);
-      }
+      const res = await fetch(getCoinList());
+      const json = res.json();
+      setCoins(json);
     };
+  }, []);
 
-    getData();
-  }, [page,currency]);
   return (
     <div>
-      <Search currency={currency} setCurrency={setCurrency}  />
-      <Tablecoin coins={coins} isLoading={isLoading} currency={currency} />
-      <Pagination page={page} setPage={setPage} />
+
+      <Tablecoin coins={coins} />
     </div>
   );
 }
