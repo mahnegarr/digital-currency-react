@@ -17,7 +17,7 @@ th{
     @apply text-[1rem] text-left py-3 px-0
 }
 
-tbody tr{
+tr{
     @apply h-[80px] border-b-[1px] border-[#22262e] font-[600] text-[1.1rem]
 }
 
