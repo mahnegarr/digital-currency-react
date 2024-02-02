@@ -14,9 +14,9 @@ p {
 }
 
 .disabled {
-  @apply opacity-[.3];
+  @apply bg-[#3874ff] rounded-[5px] py-[5px] px-[10px] cursor-pointer opacity-35;
 }
 
 .selected {
-  @apply bg-[#3874ff] text-[#fff] border-[#3874ff]
+  @apply bg-[#3874ff] text-[#fff] border-[1px] border-[#3874ff]
 }
