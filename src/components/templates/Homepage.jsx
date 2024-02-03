@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
-import Tablecoin from "../modules/Tablecoin";
+
 import { getCoinList } from "../../services/cryptoAPI.js";
+import Tablecoin from "../modules/Tablecoin";
 import Pagination from "../modules/Pagination.jsx";
 import Search from "../modules/Search.jsx";
+import Chart from "../modules/Chart.jsx";
 
 function Homepage() {
   const [coins, setCoins] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [currency, setCurrency] = useState("usd");
+  const [chart,setChart] = useState(null)
 
   useEffect(() => {
     setIsLoading(true);
@@ -31,6 +34,7 @@ function Homepage() {
       <Search currency={currency} setCurrency={setCurrency} />
       <Tablecoin coins={coins} isLoading={isLoading} />
       <Pagination page={page} setPage={setPage} />
+      <Chart />
     </div>
   );
 }

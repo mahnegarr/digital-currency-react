@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
 
 import { searchCoin } from "../../services/cryptoAPI";
-import style from "../modules/Search.module.css"
+import style from "../modules/Search.module.css";
 
 function Search({ currency, setCurrency }) {
   const [text, setText] = useState("");
@@ -11,6 +11,7 @@ function Search({ currency, setCurrency }) {
   useEffect(() => {
     const controller = new AbortController();
     if (!text) {
+        setCoins([])
       setIsLoading(false);
       return;
     }
@@ -51,26 +52,28 @@ function Search({ currency, setCurrency }) {
         <option value="jpy">JPY</option>
       </select>
 
-      <div className={style.coinContainer}>
-        {isLoading && (
-          <RotatingLines
-            strokeColor="#3874ff"
-            width="50px"
-            height="50px"
-            strokeWidth="2"
-          />
-        )}
-        <ul>
-          {coins.map((coin) => {
-            return (
-              <li key={coin.id}>
-                <img src={coin.thumb} alt={coin.name} />
-                <p>{coin.name}</p>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      {(!!coins.length || isLoading) && (
+        <div className={style.coinContainer}>
+          {isLoading && (
+            <RotatingLines
+              strokeColor="#3874ff"
+              width="50px"
+              height="50px"
+              strokeWidth="2"
+            />
+          )}
+          <ul>
+            {coins.map((coin) => {
+              return (
+                <li key={coin.id}>
+                  <img src={coin.thumb} alt={coin.name} />
+                  <p>{coin.name}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
