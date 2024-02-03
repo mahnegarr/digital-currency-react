@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.searchContainer input{
+    @apply bg-[#23242e] text-[#fff] text-[1.1rem] py-2 pl-3 rounded-[8px] w-[300px] mr-4 border-none outline-none focus:outline-none placeholder:text-white 
+}
+
+select{
+    @apply bg-[#23242e] text-[#fff] rounded-[8px] h-10 cursor-pointer focus:outline-none
+}
+
+.coinContainer{
+    @apply h-[400px] text-center overflow-y-scroll bg-[#18181c] border-[2px] border-[#22262e] w-[300px] rounded-[2px] absolute p-5 mt-2 z-10
+}
+
+::-webkit-scrollbar{
+    @apply w-0 bg-transparent;
+}
+
+.coinContainer li{
+    @apply list-none flex mb-4 pb-2 border-b-[2px] border-b-[#22262e]
+}
+
+.coinContainer li img{
+    @apply mr-3 w-6 h-6
+}

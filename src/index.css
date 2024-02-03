@@ -72,7 +72,7 @@ button:focus-visible {
 @tailwind utilities;
 
 body{
-  @apply m-auto max-w-[1200px] min-h-[100vh] p-[10px] bg-[#131315] text-[#fff]
+  @apply  m-auto max-w-[1200px] min-h-[100vh] px-[5rem] pt-12 bg-[#131315] text-[#fff]
 }
 
 *{
