@@ -14,12 +14,14 @@ function Search({ currency, setCurrency }) {
         });
         const json = await res.json();
         console.log(json);
-        if (json.coins) {setCoins(json.coins)}else{
-            alert(json.status.error_message)
-        };
+        if (json.coins) {
+          setCoins(json.coins);
+        } else {
+          alert(json.status.error_message);
+        }
       } catch (error) {
-        if (error !== "AbortError") {
-          alert(abort.message);
+        if (error.name !== "AbortError") {
+          alert(error.message);
         }
       }
     };
@@ -39,6 +41,14 @@ function Search({ currency, setCurrency }) {
         <option value="eur">EUR</option>
         <option value="jpy">JPY</option>
       </select>
+
+      <div>
+        <ul>
+          {coins.map((coin) => {
+            return <li key={coin.id}>{coin.name}</li>;
+          })}
+        </ul>
+      </div>
     </div>
   );
 }
