@@ -2,9 +2,11 @@ import React from "react";
 import chartUp from "../../assets/chart-up.svg";
 import chartDown from "../../assets/chart-down.svg";
 import style from "../modules/Tablecoin.module.css";
+import { marketChart } from "../../services/cryptoAPI.js";
 
 function TableRow({
   coin: {
+    id,
     image,
     symbol,
     name,
@@ -14,8 +16,14 @@ function TableRow({
   },
   setChart,
 }) {
-  const showHandler = () => {
-    setChart(true);
+  const showHandler = async () => {
+    try {
+      const res = await fetch(marketChart(id));
+      const json = await res.json();
+      setChart(json);
+    } catch (error) {
+      setChart(null);
+    }
   };
   return (
     <tr>
