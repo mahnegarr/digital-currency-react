@@ -12,11 +12,15 @@ function TableRow({
     total_volume,
     price_change_percentage_24h: price_change,
   },
+  setChart,
 }) {
+  const showHandler = () => {
+    setChart(true);
+  };
   return (
     <tr>
       <td>
-        <div className={style.symbol}>
+        <div className={style.symbol} onClick={showHandler}>
           <img src={image} alt="" />
           <span>{symbol.toUpperCase()}</span>
         </div>

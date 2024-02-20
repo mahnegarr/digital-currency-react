@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.container{
+    @apply fixed top-0 left-0 w-full h-full backdrop-filter backdrop-blur-sm
+}
+
+.cross{
+    @apply cursor-pointer inline-block text-[1.5rem] font-[700] bg-[#d33636] text-[#fff] w-[30px] h-[30px] leading-[30px] text-center mt-[30px] ml-[30px] rounded-[5px]
+}
+
+.chart{
+    @apply w-[800px] m-auto p-[20px] mt-[50px] bg-[#18181ce6] border-[2px] border-[@404042] rounded-[20px] 
+}
