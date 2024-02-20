@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Chart.module.css";
+import { convertData } from "../../helpers/convertData";
+import { ResponsiveContainer } from "recharts";
 
 function Chart({ chart, setChart }) {
-  console.log(chart);
+  const [type, setType] = useState("prices");
+  console.log(convertData(chart, type));
   return (
     <div className={styles.container}>
       <span className={styles.cross} onClick={() => setChart(null)}>
         X
       </span>
-      <div className={styles.chart}></div>
+      <div className={styles.chart}>
+        <div className={styles.graph}>
+          <ResponsiveContainer></ResponsiveContainer>
+        </div>
+      </div>
     </div>
   );
 }
