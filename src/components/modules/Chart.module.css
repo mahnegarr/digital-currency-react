@@ -17,3 +17,12 @@
 .graph {
   @apply w-[760px] h-[300px];
 }
+.name {
+  @apply flex items-center mt-0 mx-[10px] mb-[30px];
+}
+.name img {
+  @apply w-[40px] h-[40px] mr-[20px];
+}
+.name p {
+  @apply text-[1.5rem] font-[700];
+}
