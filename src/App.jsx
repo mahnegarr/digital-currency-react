@@ -1,11 +1,12 @@
+import Layout from "./layouts/Layout";
 import Homepage from "./components/templates/Homepage";
-
 
 function App() {
   return (
     <>
-      
-      <Homepage />ّ
+      <Layout>
+        <Homepage />
+      </Layout>
     </>
   );
 }
