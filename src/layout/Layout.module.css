@@ -1,0 +1,11 @@
+header {
+  @apply flex items-center justify-between bg-[#3874ff] py-[10px] px-[20px] mb-[150px] rounded-[10px];
+}
+
+header a {
+  @apply no-underline text-[#000000] font-[600] text-[1.1rem];
+}
+
+footer {
+  @apply text-center bg-[#3874ff] p-[20px] mt-[80px] rounded-[10px];
+}
