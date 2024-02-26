@@ -26,3 +26,26 @@
 .name p {
   @apply text-[1.5rem] font-[700];
 }
+.types {
+  @apply mt-[30px];
+}
+
+.types button {
+  @apply my-[10px] mx-[20px] bg-[#18181cdb] border-[1px] border-[#3874ff] text-[#3874ff] text-[1rem] py-[5px] px-[10px] rounded-[5px] cursor-pointer;
+}
+
+.types .selected {
+  @apply bg-[#3874ff] text-[#fff];
+}
+
+.details {
+  @apply flex justify-between mt-[30px] mb-0 mx-[20px];
+}
+
+.details div {
+  @apply flex text-[1.1rem];
+}
+
+.details p {
+  @apply mr-[7px] font-[700] text-[#3874ff];
+}
