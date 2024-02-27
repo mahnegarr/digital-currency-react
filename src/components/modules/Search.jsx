@@ -46,7 +46,7 @@ function Search({ currency, setCurrency }) {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <select value={currency} onChange={(e) => setCurrency(e.target.value)}>
+      <select value={currency} onChange={(e) => setCurrency(e.target.value) }>
         <option value="usd">USD</option>
         <option value="eur">EUR</option>
         <option value="jpy">JPY</option>

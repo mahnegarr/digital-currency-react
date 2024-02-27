@@ -32,7 +32,7 @@ function TableRow({ coin, setChart }) {
         </div>
       </td>
       <td>{name}</td>
-      <td>{current_price.toLocaleString()}</td>
+      <td>${current_price.toLocaleString()}</td>
       <td className={price_change > 0 ? style.success : style.error}>
         {price_change.toFixed(2)}
       </td>
